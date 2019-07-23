@@ -1,0 +1,877 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap&subset=cyrillic');
+@import url('reset.css');
+
+/*****************HEADER****************************************************/
+
+header {
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	width: 100%;
+	position: relative;
+}
+
+#headerInner {
+	border-bottom: 2px outset var(--heading-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	width: 90%;
+}
+
+#galleryBtn:hover {
+	cursor: pointer;
+	color: var(--additional-color);
+	font-size: 1.3rem;
+}
+
+#headerSideMenu > nav {
+	display: flex;
+	align-items: center;
+}
+
+#username {
+	margin: auto 10px;
+}
+
+#settingsGear {
+	height: 40px;
+}
+
+#avatar {
+	border: 2px outset var(--heading-color);
+	border-radius: 50%;
+	margin-left: 50px;
+	height: 40px;
+	width: 40px;
+}
+
+#galleryBtn {
+	background: var(--pannel-color);
+	border: 2px outset var(--heading-color);
+	border-radius: 25px;
+	padding: 12px 40px;
+	position: relative;
+	top: 20px;
+	z-index: 12;
+}
+
+.icon:hover {
+	cursor: pointer;
+	filter: drop-shadow(1px 1px 1px var(--additional-color));
+}
+
+#userMenu {
+	background: var(--pannel-color);
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 55px;
+	right: 5%;
+	width: 200px;
+	z-index: 20;
+}
+
+.menuItem {
+	display: flex;
+	border-bottom: 1px solid var(--border-color);
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	width: 90%;
+
+}
+
+.menuItem img{
+	height: 30px;
+}
+
+.menuItem img:hover{
+	cursor: pointer;
+	filter: drop-shadow(1px 1px 1px var(--heading-color));
+}
+.menuItem p {
+	font-weight: bold;
+}
+
+.menuItem.form {
+	justify-content: center;
+}
+
+.menuItem form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+}
+
+.menuItem form input {
+	background: var(--pannel-color);
+	border: none;
+	border-bottom: 1px solid var(--border-color);
+	outline: none;
+	text-align: center;
+	font-size: 1.1rem;
+	width: 100%;
+}
+
+.menuItem form input[type=submit] {
+	border: 2px outset var(--heading-color);
+	border-radius: 25px;
+	font-size: .9rem;
+	margin-top: 10px;
+	width: 50%;
+
+}
+/*********************MAIN******************************************************/
+
+#bodyContainer {
+	background: var(--pannel-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	max-width: 1000px;
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+}
+
+/*********************FOOTER*****************************************************/
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 35px;
+	width: 90%;
+}
+
+footer > p {
+	border-top: 2px outset var(--heading-color);
+	font-weight: bold;
+	padding: auto 5px;
+	text-align: right;
+	width: 90%;
+}
+
+/**********************LOGIN******************************************************/
+
+#loginContainer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	max-width: 1000px;
+
+}
+
+.formContainer {
+	background: var(--pannel-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: absolute;
+	min-height: 100%;
+	width: 100%;
+}
+
+.formContainer span:hover {
+	color: var(--additional-color);
+	cursor: pointer;
+}
+
+#signInFormWrapper {
+	z-index: 2;
+}
+
+#signUpFormWrapper {
+	z-index: 1;
+}
+
+#forgotFormWrapper {
+	z-index: 1;
+}
+
+.formContainer p {
+	margin: 10px auto;
+	text-align: center;
+}
+
+.formContainer form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	width: 350px;
+}
+
+.inputLine {
+	position: relative;
+	height: 50px;
+	margin-bottom: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.inputLine input {
+	background: var(--pannel-color);
+	border: none;
+	height: 100%;
+	font-size: 18px;
+	outline: none;
+	padding: 20px 5px 0 5px;
+	width: 100%;
+}
+
+.inputLine > label {
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.inputLine label::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid var(--heading-color);
+	transform: translateX(-102%);
+	transition: transform .6s ease-out;
+}
+
+.inputLine.error label::after {
+	border-bottom: 3px solid darkred;
+}
+
+.contentName {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	transition: all .3s ease;
+}
+
+.inputLine input:focus + .labelName .contentName,
+.inputLine input:valid + .labelName .contentName {
+	transform: translateY(-150%);
+	color: var(--font-color);
+	font-size: 14px;
+}
+
+.inputLine input:focus + .labelName::after,
+.inputLine input:valid + .labelName::after {
+	transform: translateY(0%);
+}
+
+.formContainer input[type=submit] {
+	background: var(--pannel-color);
+	border: 2px outset var(--heading-color);
+	border-radius: 25px;
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	padding: 12px 40px;
+	margin: 20px auto;
+	transition: .6s ease;
+}
+
+.formContainer input[type=submit]:hover {
+	color: var(--heading-color);
+	cursor: pointer;
+}
+
+.formContainer input[type=submit]:active {
+	transform: scale(.95);
+}
+
+#userpicWrapper {
+	display: flex;
+	border: 2px outset var(--heading-color);
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 150px;
+}
+
+#userpicImg {
+	border-radius: 50%;
+	border: 3px outset var(--heading-color);
+	height: 120px;
+	overflow: hidden;
+	width: 120px;
+	transition: .6s;
+}
+
+#userpicImg img {
+	object-fit: cover;
+	height: 120px;
+	width: 120px;
+}
+
+#userpicImg:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+#userpicInput {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#userpicInput > input {
+	display: none;
+}
+
+.userpicBtn {
+	background: var(--pannel-color);
+	border: 1px solid var(--heading-color);
+	border-radius: 15px;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+}
+
+.userpicBtn:hover {
+	color: var(--heading-color);
+	cursor: pointer;
+}
+
+.message {
+	color: darkgreen;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.error {
+	color: darkred;
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+
+/**************************POPUPS**********************************************************/
+
+.layout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+.popup {
+	background: transparent;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	padding: 12px 12px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 11;
+}
+
+#userpicMethodPopup {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 250px;
+}
+
+#userpicMethodPopup form {
+	display: none;
+}
+
+#video {
+	background: transparent;
+	width: 800px;
+	height: 600px;
+}
+
+#cameraPreview canvas {
+	display: none;
+}
+
+#snapBtn {
+	background: darkred;
+	border: 3px outset var(--heading-color);
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	transition: scale .6s;
+
+}
+
+#snapBtn:hover {
+	cursor: pointer;
+}
+
+#snapBtn:active {
+	transform:  scale(.95);
+}
+
+#editFormWrapper {
+	background: var(--pannel-color);
+	border-radius: 15px;
+	display: none;
+	padding: 30px 60px;
+	z-index: 11;
+}
+
+#editFormWrapper h4 {
+	color: var(--font-color);
+	margin: 20px auto;
+	text-align: center;
+}
+
+#editFormWrapper input[type=submit] {
+	background: var(--pannel-color);
+	border: 3px outset var(--heading-color);
+	border-radius: 25px;
+	color: var(--heading-color);
+	outline: none;
+	padding: 12px 40px;
+	transition: color .6s;
+}
+
+#editFormWrapper input[type=submit]:hover {
+	color: var(--additional-color);
+	cursor: pointer;
+
+}
+
+#editFormWrapper form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.close {
+	position: absolute;
+	height: 20px;
+	top: 10px;
+	right: 10px;
+}
+
+.close:hover {
+	cursor: pointer;
+	filter: drop-shadow(1px 1px 1px var(--additional-color));
+}
+
+
+
+/*********************APPLICATION************************************************************/
+
+#applicationWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+}
+
+#recentPhotos {
+	background: var(--backgrong-color);
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 700px;
+	overflow: hidden;
+	margin: 0 10px;
+	width: 190px;
+}
+
+#videoWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 100%;
+}
+
+video {
+	box-shadow: 0 5px 5px var(--backgrong-color);
+	position: relative;
+	transition: transform .6s;
+	z-index: 7;
+}
+
+#uploadPanel {
+	background: var(--backgrong-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 6;
+}
+
+#uploadPanel > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 7;
+}
+
+#uploadFile {
+	display: none;
+}
+
+#uploadPanel label:hover {
+	cursor: pointer;
+}
+
+#controlPanel {
+	background: var(--backgrong-color);
+	border-radius: 0 0 20px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	margin-bottom: 20px;
+	width: 96%;
+}
+
+#controlPanel select,
+#controlPanel button {
+	background: var(--backgrong-color);
+	color: var(--font-color);
+	font-size: 1.1rem;
+	font-weight: bold;
+	outline: none;
+	padding: 5px 5px;
+	-webkit-appearance: none;
+}
+
+#controlPanel select:first-child {
+	border-radius: 20px 0 0 20px;
+}
+
+#controlPanel select:last-child {
+	border-radius: 0 20px 20px 0;
+}
+
+#controlPanel select:hover,
+#controlPanel button:hover {
+	cursor: pointer;
+	color: var(--heading-color);
+}
+
+#shootBtn {
+	background: darkred;
+	border-radius: 50%;
+	border: 2px outset var(--heading-color);
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+
+.stickerImage {
+	height: 200px;
+	position: fixed;
+	z-index: 9;
+}
+
+.stickerImage:hover {
+	cursor: pointer;
+}
+
+#imageContextMenu {
+	background: var(--pannel-color);
+	border-radius: 5px;
+	color: var(--font-color);
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: color .6s;
+	padding: 0 5px;
+	position: fixed;
+	z-index: 11;
+
+
+}
+
+.contextMenuItem {
+	border-bottom: 1px solid var(--border-color);
+	font-size: 14px;
+	padding: 5px 5px;
+}
+
+.contextMenuItem form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+}
+
+.contextMenuItem input{
+	background: var(--pannel-color);
+	border: 1px solid silver;
+	color: var(--font-color);
+	padding: 0 3px;
+	margin: 0 5px;
+	width: 32px;
+}
+
+canvas {
+	display: none;
+}
+
+.contextMenuItem form input[type=submit] {
+	display: none;
+}
+
+.contextMenuItem:last-child {
+	border: none;
+}
+
+.contextMenuItem:hover p {
+	color: var(--heading-color);
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+#shootBtn:hover {
+	cursor: pointer;
+}
+
+#shootBtn:active {
+	transform: scale(.95);
+}
+
+#recentPhotos > img {
+	height: 150px;
+	transition: .5s;
+}
+
+#recentPhotos > img:hover {
+	cursor: pointer;
+	transform: scale(1.3);
+}
+/*********************CHECKBOX****************************************************************/
+
+.checkbox {
+	background: #121212;
+	border-radius: 20px;
+	height: 10px;
+	outline: none;
+	position: relative;
+	width: 50px;
+	-webkit-appearance: none;
+}
+
+.checkbox:before {
+	background: var(--heading-color);
+	border-radius: 50%;
+	content: '';
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	left: 2px;
+	top: -5px;
+	transition: .6s;
+}
+
+.checkbox:checked:before {
+	left: 28px;
+}
+
+.checkbox:hover {
+	cursor: pointer;
+}
+
+/*************GALLERY**************************************************************************/
+
+#gallery {
+	background: var(--pannel-color);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+	overflow: auto;
+	align-self: stretch;
+	width: 100%;
+}
+
+#imageInfoContainer {
+	background: var(--pannel-color);
+	border-bottom: 1px solid var(--border-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10px;
+	width: 100%;
+}
+
+#commentInputContainer {
+	background: var(--pannel-color);
+	display: none;
+	width: 100%;
+}
+
+#commentInputContainer form {
+	background: var(--pannel-color);
+	position: relative;
+	width: 100%;
+}
+
+#commentInputContainer textarea {
+	background: var(--backgrong-color);
+	border: none;
+	overflow-y: auto;
+	outline: none;
+	padding: 5px 12px;
+	resize: none;
+	width: 100%;
+}
+
+#commentInputContainer input {
+	background: var(--pannel-color);
+	border: 2px solid var(--border-color);
+	border-radius: 15px;
+	padding: 5px 15px;
+	position: absolute;
+	right: 0;
+	bottom: -10px;
+}
+
+#commentInputContainer input:hover {
+	cursor: pointer;
+	color: var(--heading-color);
+}
+
+#lastComments {
+	width: 100%;
+}
+
+#likeContainer {
+	display: flex;
+}
+
+.like {
+	height: 25px;
+	margin-left: 10px;
+	transition: .6s;
+}
+
+.like:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.like:active {
+	transform: scale(.9);
+}
+
+::-webkit-scrollbar {
+	background: transparent;
+}
+
+.galleryImage {
+	border: 1px solid var(--border-color);
+	height: 150px;
+	transition: .6s;
+}
+
+.galleryImage:hover {
+	cursor: pointer;
+	transform: scale(1.3);
+}
+
+#comments {
+	background: var(--pannel-color);
+	display: flex;
+	flex-direction: column;
+	max-height: 200px;
+	overflow: auto;
+	padding: 10px;
+	width: 100%;
+}
+
+#comments h4 {
+	margin-bottom: 10px;
+}
+
+.commentContainer {
+	border-bottom: 1px solid #7D4619;
+	margin-bottom: 5px;
+}
+
+.commentContainer:last-child {
+	border-bottom: none;
+}
+
+.commentHeader {
+	color: #7D4619;
+	font-size: 12px;
+
+}
+
+.commentBody {
+	margin: 3px;
+	padding: 5px 10px;
+}
+
+#imageInfo button {
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid var(--heading-color);
+	font-weight: bold;
+	color: var(--heading-color);
+	margin-left: 5px;
+}
+
+#imageInfo button:hover {
+	cursor: pointer;
+}
+/*********************MOBILE******************************************************************/
+
+@media screen and (max-width: 950px){
+
+	#applicationWrapper {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#recentPhotos {
+		flex-direction: row;
+		height: 150px;
+		margin-left: 0;
+		width: 90vw;
+	}
+}
